@@ -70,8 +70,8 @@ public class PayController {
 
     @GetMapping(value = "/pay/get/timeout")
     @Operation(summary = "测试超时", description = "测试超时")
-    public String timeout(@Value("${custom.data}") String res) {
-        return res;
+    public String timeout(@Value("${custom.data}") String res , @Value("${server.port}") String port) {
+        return res + " " + "Port:" + port;
     }
 
 }

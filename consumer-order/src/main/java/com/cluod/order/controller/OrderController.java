@@ -17,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class OrderController {
-//    public static final String PaymentSrv_URL = "http://localhost:8001";//先写死，硬编码
 
     public static final String PaymentSrv_URL = "http://cloud-payment-service";//服务注册中心上的微服务名称
     @Resource
@@ -40,6 +39,31 @@ public class OrderController {
     public ResultData getPayInfo(@PathVariable("id") Integer id) {
         return restTemplate.getForObject(PaymentSrv_URL + "/pay/get/" + id, ResultData.class, id);
     }
+
+    @GetMapping("pay/get/timeout")
+    public String getPaymentTimeout() {
+        return restTemplate.getForObject(PaymentSrv_URL + "/pay/get/timeout", String.class);
+    }
+
+//    @Resource
+//    private DiscoveryClient discoveryClient;
+//
+//    @GetMapping("/consumer/discovery")
+//    public String discovery() {
+//        List<String> services = discoveryClient.getServices();
+//        for (String element : services) {
+//            System.out.println(element);
+//        }
+//
+//        System.out.println("===================================");
+//
+//        List<ServiceInstance> instances = discoveryClient.getInstances("cloud-payment-service");
+//        for (ServiceInstance element : instances) {
+//            System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t" + element.getUri());
+//        }
+//
+//        return instances.get(0).getServiceId() + ":" + instances.get(0).getPort();
+//    }
 
 
 }

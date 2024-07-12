@@ -9,8 +9,12 @@
     <file url="file://$PROJECT_DIR$/mybatis_generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-cloud/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-cloud-8003/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
