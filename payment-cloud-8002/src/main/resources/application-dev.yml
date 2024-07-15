@@ -6,9 +6,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.101.42.60:3306/SpringCluod?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
-    username: root
-    password: '#Alone117'
+    url: jdbc:mysql://:3306/SpringCluod?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    username: 
+    password: 
 
 # ========================mybatis===================
 mybatis:
