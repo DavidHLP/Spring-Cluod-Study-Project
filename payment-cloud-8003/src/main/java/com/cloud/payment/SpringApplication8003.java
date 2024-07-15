@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableDiscoveryClient//该注解用于向使用consul或者zookeeper作为注册中心时注册服务
 @SpringBootApplication
 @MapperScan("com.cloud.payment.mapper")
-@ComponentScan(basePackages = {"com.cloud.payment.controller"})
+@ComponentScan(basePackages = {"com.cloud.payment.controller", "com.cluod.commons.exp"})
 @RefreshScope // 动态刷新
 public class SpringApplication8003 {
     public static void main(String[] args) {

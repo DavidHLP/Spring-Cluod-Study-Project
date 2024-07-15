@@ -3,6 +3,8 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/cluod-api-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cluod-api-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-order-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-order-feign/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis_generator/src/main/java" charset="UTF-8" />

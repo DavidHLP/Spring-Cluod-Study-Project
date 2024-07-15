@@ -3,6 +3,7 @@ package com.cluod.order.controller;
 import com.cluod.commons.resp.ResultData;
 import com.cluod.order.entities.PayDTO;
 import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
  * @description:
  */
 @RestController
+@Slf4j
 public class OrderController {
 
     public static final String PaymentSrv_URL = "http://cloud-payment-service";//服务注册中心上的微服务名称

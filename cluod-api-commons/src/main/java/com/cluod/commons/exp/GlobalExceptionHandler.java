@@ -1,8 +1,8 @@
 package com.cluod.commons.exp;
 
-
 import com.cluod.commons.resp.ResultData;
 import com.cluod.commons.resp.ReturnCodeEnum;
+import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,21 +16,21 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @Date 2024/7/8 下午3:23
  * @description: 用于处理全局异常
  */
-
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    /**
-     * 默认全局异常处理。
-     *
-     * @param e the e
-     * @return ResultData
-     */
+
+    @ExceptionHandler(FeignException.class)
+    @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
+    public ResultData<String> handleFeignException(FeignException e) {
+        log.error("Feign异常信息: {}", e.getMessage(), e);
+        return ResultData.fail(ReturnCodeEnum.RC500.getCode(), "Feign客户端异常：" + e.getMessage());
+    }
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResultData<String> exception(Exception e) {
-        System.out.println("----come in GlobalExceptionHandler");
-        log.error("全局异常信息exception:{}", e.getMessage(), e);
+    public ResultData<String> handleRuntimeException(RuntimeException e) {
+        log.error("全局异常信息: {}", e.getMessage(), e);
         return ResultData.fail(ReturnCodeEnum.RC500.getCode(), e.getMessage());
     }
 }
